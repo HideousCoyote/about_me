@@ -1,9 +1,69 @@
-          <!-- Contact-->
-            <section class="resume-section" id="contact">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Contact</h2>
-                    <p></p>
-                    <p class="mb-0"></p>
-                </div>
-            </section>
-            <hr class="m-0" />
+<!-- Contact-->
+<section class="resume-section" id="contact">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Contact</h2>
+        <form
+                action="/sent"
+                class="mb-3"
+                id="contactForm"
+                method="post"
+                name="sentMessage"
+        >
+            <div class="form-floating mb-3">
+                <input
+                        class="form-control"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name..."
+                        required
+                        type="text"
+                />
+                <label for="name">Name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email..."
+                        required
+                        type="email"
+                />
+                <label for="email">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input
+                        class="form-control"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number..."
+                        required
+                        type="tel"
+                />
+                <label for="phone">Phone Number</label>
+            </div>
+            <div class="form-floating mb-3">
+              <textarea
+                      class="form-control"
+                      id="message"
+                      name="message"
+                      placeholder="Enter your message here..."
+                      required
+                      style="height: 12rem"
+              ></textarea>
+                <label for="message">Message</label>
+            </div>
+            <br/>
+            <button
+                    class="btn btn-primary text-uppercase mb-3"
+                    id="submitButton"
+                    type="submit"
+            >
+                Send
+            </button>
+        </form>
+        <p class="mb-0">
+        </p>
+    </div>
+</section>
+<hr class="m-0"/>
