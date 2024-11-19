@@ -1,7 +1,0 @@
-dominate==2.9.1
-Flask==3.0.3
-Flask-Bootstrap==3.3.7.1
-gunicorn==23.0.0
-packaging==24.1
-python-dotenv==1.0.1
-visitor==0.1.3

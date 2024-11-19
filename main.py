@@ -9,6 +9,7 @@ load_dotenv()
 
 OWN_EMAIL = os.getenv("OWN_EMAIL")
 OWN_PASSWORD = os.getenv("OWN_PASSWORD")
+SEND_TO_EMAIL = os.getenv("SEND_TO_EMAIL")
 SUPER_SECRET_KEY = os.getenv("SUPER_SECRET_KEY")
 
 
@@ -38,7 +39,8 @@ def send_email(name, email, phone, message):
         with smtplib.SMTP("smtp.gmail.com", 587) as connection:
             connection.starttls()
             connection.login(OWN_EMAIL, OWN_PASSWORD)
-            connection.sendmail(OWN_EMAIL, OWN_EMAIL, email_message)
+            connection.sendmail(OWN_EMAIL, SEND_TO_EMAIL, email_message)
+            connection.quit()
             flash("Your Message has been sent.", "success")
     except Exception as e:
         flash("There was an error, Please try again later.", "error")
