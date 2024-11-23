@@ -1,25 +1,7 @@
 <!-- Experience-->
 <section class="resume-section" id="experience">
     <div class="resume-section-content text-center">
-        <h2 class="mb-0">Work Experience</h2>
-        {% for job in jobs %}
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="card w-100 mb-3">
-                <div class="card-header ">
-                    {{ job.company  }}
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">{{ job.position + "  -   " + job.location }}</h5>
-                    {% for desc in job['description'] %}
-                    <p class="card-text text-start">{{ "* " + desc }}</p>
-                    {% endfor %}
-                </div>
-                <div class="card-footer text-body-secondary text-end">
-                    {{ job.date }}
-                </div>
-            </div>
-        </div>
-        {% endfor %}
+        {% include 'cards.html' %}
     </div>
 </section>
 <hr class="m-0"/>
